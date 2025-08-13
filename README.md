@@ -1,2 +1,3 @@
 # The-Pyramid-Code
 I think I created a new code? I made this about 5 years ago but I didn't think to post it until now.
+The pyramid is a hand solvable simple substitution. It arranges the alphabet into a triangle and encodes letters by moving along the paths inside the triangle. The standard method for encoding is to move one place to the right, following the paths inside the diagram, and to decode simply move one place to the left. A numeric and/ or positional key can be used to make the coded messages polyalphabetic, making them more secure, for example the user can encode with L3 meaning move to the left 3 places.
