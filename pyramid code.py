@@ -1,8 +1,8 @@
 # pyramid_cipher_poly.py
 """
 Pyramid Cipher (Triangle Traversal) — Mono & Polyalphabetic
-Author: Your Name
-Date: 2025-08-13
+Author: Arc Flash
+Date: 14/08/2025
 
 Traversal order (rightward encoding path):
 Q J E B A D I P Y R K F C H O X S L G N W T M V U
@@ -10,14 +10,14 @@ Z is outside the triangle and maps to itself (Z -> Z).
 
 Features:
 - Monoalphabetic: move 1 step right (encode) or left (decode).
-- Polyalphabetic: move n steps per char using a numeric key sequence (e.g., 2,1,3).
+- Polyalphabetic: move n steps per character using a numeric key sequence (e.g., 1,2,3).
 - Preserves case and non-letters.
 """
 
 from typing import Iterable, List
 import argparse
 
-# Triangle traversal order (excluding Z which is fixed)
+
 ORDER = "QJEBADIPYRKFCHOXSLGNWTMVU"
 ORDER_SET = set(ORDER)
 
@@ -41,7 +41,7 @@ def _shift_char(ch: str, steps: int, encode: bool) -> str:
 
     upper = ch.upper()
     if upper not in ORDER_SET:
-        # Safety: if someone extends alphabet, just pass through
+        # If someone extends alphabet, just pass through
         return ch
 
     idx = ORDER.index(upper)
@@ -104,3 +104,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
